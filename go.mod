@@ -1,4 +1,4 @@
-module github.com/go-playground/webhooks/v6
+module github.com/finkandreas/webhooks/v6
 
 go 1.15
 
@@ -7,4 +7,4 @@ require (
 	github.com/stretchr/testify v1.6.1
 )
 
-replace github.com/go-playground/webhooks/v6 => github.com/finkandreas/finkandreas/webhooks/v6 v6.1.0
+replace github.com/go-playground/webhooks/v6 => github.com/finkandreas/finkandreas/webhooks/v6 v6.1.1
