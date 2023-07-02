@@ -232,15 +232,6 @@ func TestWebhooks(t *testing.T) {
 			},
 		},
 		{
-			name:     "BuildEvent",
-			event:    BuildEvents,
-			typ:      BuildEventPayload{},
-			filename: "../testdata/gitlab/build-event.json",
-			headers: http.Header{
-				"X-Gitlab-Event": []string{"Build Hook"},
-			},
-		},
-		{
 			name:     "DeploymentEvent",
 			event:    DeploymentEvents,
 			typ:      DeploymentEventPayload{},
@@ -294,9 +285,9 @@ func TestJobHooks(t *testing.T) {
 	}{
 		{
 			name:     "JobEvent",
-			events:   []Event{JobEvents, BuildEvents},
-			typ:      BuildEventPayload{},
-			filename: "../testdata/gitlab/build-event.json",
+			events:   []Event{JobEvents},
+			typ:      JobEventPayload{},
+			filename: "../testdata/gitlab/job-event.json",
 			headers: http.Header{
 				"X-Gitlab-Event": []string{"Job Hook"},
 			},
